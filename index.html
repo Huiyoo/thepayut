@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<meta property="og:title" content="สารบัญ ระบบเทพยุทธ์เจ้าคัมภีร์">
+<meta property="og:description" content="กดเลือกอ่านตอนไหนก็ได้ทันที · เพลย์ลิสต์ Reels ทุกตอน">
+<meta property="og:image" content="https://huiyoo.github.io/thepayut/img/cover.jpg">
+<style>body{margin:0}</style>
+</head>
+<body>
+<title>สารบัญระบบเทพยุทธ์เจ้าคัมภีร์</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Taviraj:wght@500;700&family=Sarabun:wght@400;500;600&display=swap">
+<style>
+  /* One deliberate world: the night of the cover, and the System speaking in gold. Painted explicitly everywhere. */
+  :root {
+    --ink: #0a0c11; --panel: #11151d; --panel-2: #171c27;
+    --text: #f1e9d3; --muted: #a59d88;
+    --gold: #e0bb5e; --gold-line: rgba(224,187,94,.38); --gold-faint: rgba(224,187,94,.10);
+    --ease: cubic-bezier(.22,1,.36,1);
+    color-scheme: dark;
+  }
+  body { background: var(--ink); color: var(--text); font-family: "Sarabun", "Noto Sans Thai", system-ui, sans-serif; font-size: 16px; line-height: 1.65; }
+  a { color: inherit; }
+  a:focus-visible, button:focus-visible, input:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+  .wrap { max-width: 680px; margin: 0 auto; padding-inline: 16px; }
+
+  /* ---- the System panel around the cover ---- */
+  .hero { position: relative; overflow: hidden; background: #0c0e14 url("img/backdrop.jpg") center / cover no-repeat; }
+  .hero::before { content: ""; position: absolute; inset: 0; background:
+      radial-gradient(52% 40% at 50% 34%, rgba(224,187,94,.22), transparent 72%),
+      linear-gradient(180deg, rgba(10,12,17,.5) 0%, rgba(10,12,17,.78) 60%, var(--ink) 100%); }
+  .hero-inner { position: relative; padding-block: 24px 22px; display: grid; gap: 16px; justify-items: center; text-align: center; }
+  .hero-inner > * { max-width: 100%; min-width: 0; }   /* centred grid items size to their text; cap them so long lines wrap instead of widening the page */
+  .plate { position: relative; padding: 8px; border: 1px solid var(--gold); outline: 1px solid var(--gold-line); outline-offset: 6px; background: rgba(10,12,17,.5);
+           box-shadow: 0 0 60px 8px rgba(224,187,94,.22); animation: ignite 1.6s var(--ease) both; }
+  .plate::before, .plate::after, .plate i::before, .plate i::after { content: ""; position: absolute; width: 22px; height: 22px; border: 2px solid var(--gold); }
+  .plate::before { top: -10px; left: -10px; border-right: 0; border-bottom: 0; }
+  .plate::after { top: -10px; right: -10px; border-left: 0; border-bottom: 0; }
+  .plate i::before { bottom: -10px; left: -10px; border-right: 0; border-top: 0; }
+  .plate i::after { bottom: -10px; right: -10px; border-left: 0; border-top: 0; }
+  .cover { height: min(56svh, 56vh, 440px); width: auto; max-width: min(88vw, 100%); aspect-ratio: 4 / 5; display: block; }   /* sized by the phone's height so cover + buttons fit one screen */
+  @keyframes ignite { from { box-shadow: 0 0 0 0 rgba(224,187,94,0); border-color: var(--gold-line); } to { box-shadow: 0 0 60px 8px rgba(224,187,94,.22); border-color: var(--gold); } }
+  .vh { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }   /* heading for screen readers and the tab; the cover carries the visible title */
+  .actions { display: flex; flex-wrap: nowrap; gap: 10px; justify-content: center; width: 100%; }
+  .actions .btn { flex: 1 1 0; justify-content: center; white-space: nowrap; max-width: 260px; }
+  .btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 14px; text-decoration: none; font-weight: 600; font-size: 15px; border: 1px solid var(--gold-line); color: var(--text); background: rgba(17,21,29,.85); transition: border-color .25s var(--ease), background .25s var(--ease); }
+  .btn:hover { border-color: var(--gold); }
+  .btn.primary { background: var(--gold); color: #15120b; border-color: var(--gold); }
+  .btn.primary:hover { background: #ecc86f; }
+  .btn svg { width: 15px; height: 15px; fill: currentColor; }
+
+  /* ---- controls ---- */
+  .bar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 2; background: var(--ink); border-bottom: 1px solid var(--gold-line); }
+  .bar-inner { display: flex; gap: 8px; align-items: center; padding-block: 10px; }
+  .bar input { flex: 1; min-width: 0; font: inherit; font-size: 16px; padding: 11px 12px; border: 1px solid var(--gold-line); background: var(--panel); color: var(--text); }
+  .bar input::placeholder { color: var(--muted); }
+  .bar button { font: inherit; font-size: 14px; font-weight: 600; padding: 11px 12px; border: 1px solid var(--gold-line); background: var(--panel); color: var(--gold); cursor: pointer; white-space: nowrap; }
+
+  /* ---- the index ---- */
+  main { padding-block: 6px 40px; }
+  .group { margin-top: 30px; }
+  .group h2 { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 12px; margin: 0 0 10px; font-family: "Taviraj", serif; font-weight: 500; font-size: 17px; color: var(--gold); font-variant-numeric: tabular-nums; }
+  .group h2::after { content: ""; height: 1px; background: linear-gradient(90deg, var(--gold-line), transparent); grid-column: 2; }
+  .group h2 small { font-family: "Sarabun", sans-serif; color: var(--muted); font-size: 13px; grid-column: 3; }
+  ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+  .row { display: grid; grid-template-columns: 46px 1fr auto; gap: 0 14px; align-items: center; padding: 7px 12px 7px 7px; background: var(--panel); border: 1px solid transparent; text-decoration: none; transition: border-color .2s var(--ease), background .2s var(--ease); }
+  .row:hover { border-color: var(--gold-line); background: var(--panel-2); }
+  .num { display: grid; place-items: center; width: 46px; height: 46px; border: 1px solid var(--gold-line); font-family: "Taviraj", serif; font-weight: 700; font-size: 18px; color: var(--gold); font-variant-numeric: tabular-nums; background: var(--gold-faint); }
+  .row:hover .num { border-color: var(--gold); }
+  .title { font-weight: 500; }
+  .date { font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .empty { color: var(--muted); padding: 24px 0; text-align: center; }
+  footer { padding-block: 0 44px; font-size: 12px; color: var(--muted); text-align: center; line-height: 1.7; }
+  @media (max-width: 420px) { .row { grid-template-columns: 42px 1fr; } .num { width: 42px; height: 42px; font-size: 16px; } .date { grid-column: 2; } .btn { font-size: 14px; padding: 11px 10px; gap: 6px; } }
+  @media (prefers-reduced-motion: reduce) { .plate { animation: none; } .btn, .row { transition: none; } }
+</style>
+
+<header class="hero">
+  <div class="wrap hero-inner">
+    <div class="plate"><i></i><h1 class="vh">สารบัญ ระบบเทพยุทธ์เจ้าคัมภีร์</h1><img class="cover" src="img/cover.jpg" alt="ปกนิยาย ระบบเทพยุทธ์เจ้าคัมภีร์" width="720" height="900"></div>
+    <div class="actions">
+      <a class="btn primary" href="https://www.facebook.com/watch/1195463440326870/1782070199461671" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>ดู Reels ทุกตอน</a>
+      <a class="btn" href="https://www.facebook.com/profile.php?id=1195463440326870" target="_blank" rel="noopener">เพจ Online Novel</a>
+    </div>
+  </div>
+</header>
+
+<div class="bar">
+  <div class="wrap bar-inner">
+    <input id="q" type="search" placeholder="ค้นหาเลขตอนหรือชื่อตอน…" aria-label="ค้นหาตอน" autocomplete="off">
+    <button id="latest" type="button">ไปท้ายรายการ</button>
+  </div>
+</div>
+
+<main class="wrap" id="list"></main>
+<footer class="wrap">สารบัญอัปเดตทุกวันอาทิตย์ · ตอนใหม่โพสต์ที่หน้าเพจทุกวัน 16:00</footer>
+
+<script>
+  let DATA = [];
+  const list = document.getElementById("list"), q = document.getElementById("q");
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+  const thDate = iso => { const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(iso || ""); if (!m) return iso || ""; const mon = ["ม.ค.","ก.พ.","มี.ค.","เม.ย.","พ.ค.","มิ.ย.","ก.ค.","ส.ค.","ก.ย.","ต.ค.","พ.ย.","ธ.ค."]; return `${+m[3]} ${mon[+m[2]-1]} ${+m[1]+543}`; };
+  fetch("data/toc.json", { cache: "no-store" }).then(r => r.json()).then(rows => {
+    DATA = rows.filter(c => c.u).sort((a, b) => a.n - b.n);          // only chapters already posted: unpublished titles are spoilers
+    render(q.value);
+  }).catch(() => { list.innerHTML = '<p class="empty">โหลดรายการตอนไม่สำเร็จ: ลองรีเฟรชหน้า</p>'; });
+  function render(filter) {
+    const f = (filter || "").trim().toLowerCase();
+    const rows = DATA.filter(c => !f || String(c.n) === f || c.t.toLowerCase().includes(f) || ("ตอนที่ " + c.n).includes(f));
+    if (!rows.length) { list.innerHTML = '<p class="empty">ไม่พบตอนที่ค้นหา</p>'; return; }
+    const groups = new Map();
+    for (const c of rows) { const g = Math.floor((c.n - 1) / 20); if (!groups.has(g)) groups.set(g, []); groups.get(g).push(c); }
+    let html = "";
+    for (const [g, cs] of groups) {
+      const a = g * 20 + 1, b = Math.max(...cs.map(c => c.n));
+      html += `<section class="group" id="g${g}"><h2><span>ตอนที่ ${a}–${b}</span><small>${cs.length} ตอน</small></h2><ol>`;
+      for (const c of cs) html += `<li><a class="row" href="${esc(c.u)}" target="_blank" rel="noopener"><span class="num">${c.n}</span><span class="title">${esc(c.t)}</span><span class="date">${thDate(c.d)}</span></a></li>`;
+      html += "</ol></section>";
+    }
+    list.innerHTML = html;
+  }
+  q.addEventListener("input", () => render(q.value));
+  document.getElementById("latest").addEventListener("click", () => {
+    q.value = ""; render("");
+    const last = DATA[DATA.length - 1]; const el = last && document.getElementById("g" + Math.floor((last.n - 1) / 20));
+    if (el) el.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+  });
+</script>
+
+</body>
+</html>
